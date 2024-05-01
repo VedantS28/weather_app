@@ -5,6 +5,7 @@ import "package:flutter/material.dart";
 import "package:intl/intl.dart";
 import "package:provider/provider.dart";
 import "package:weather_app/additional_info.dart";
+import "package:weather_app/const.dart";
 import "package:weather_app/hourly_infor.dart";
 import "package:weather_app/theme/theme_provider.dart";
 
@@ -30,8 +31,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
       String cityName = 'Jabalpur';
       final res = await http.get(
         Uri.parse(
-         {Your API HERE}      
-    ),
+          'https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=$APIKey',
+        ),
       );
 
       final data = jsonDecode(res.body);
