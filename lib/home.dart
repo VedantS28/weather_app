@@ -30,8 +30,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
       String cityName = 'Jabalpur';
       final res = await http.get(
         Uri.parse(
-          'https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=4b80101048c82273784d8e427cb3ac32',
-        ),
+         {Your API HERE}      
+    ),
       );
 
       final data = jsonDecode(res.body);
